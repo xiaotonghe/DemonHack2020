@@ -4,8 +4,8 @@
   "description": "This Extension passes DOM to a socket connection",
   "permissions": ["<all_urls>", "activeTab", "declarativeContent", "storage"],
   "background": {
-    "scripts": ["background.js"],
-    "persistent": false
+    "page": "background.html",
+    "persistent": true
   },
   "content_scripts": [
     {
