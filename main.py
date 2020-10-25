@@ -14,10 +14,6 @@ predictor = dlib.shape_predictor("shape_predictor_68_face_landmarks.dat")
 mouse = Controller()
 
 
-def midpoint(p1, p2):
-    return int((p1.x + p2.x)/2), int((p1.y + p2.y)/2)
-
-
 with open('DOMMatrix', 'rb') as f:
     # dump information to that file
     DOMMatrix = pickle.load(f)
@@ -32,16 +28,8 @@ while True:
     gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)  # make it gray
     faces = detector(gray)  # detect face
     for face in faces:
-        x, y = face.left(), face.top()
-        x1, y1 = face.right(), face.bottom()
-        # cv2.rectangle(frame, (x, y), (x1, y1), (0, 255, 0), 2)
         landmarks = predictor(gray, face)
-        # x_ = []
-        # y_ = []
-        # for i in [38, 45]:
-        #     x_.append(landmarks.part(i).x)
-        #     y_.append(landmarks.part(i).y)
-    pos = 29
+    pos = 29 # Nose location
     x = int(landmarks.part(pos).x)  # x coordinate position
     y = int(landmarks.part(pos).y)  # y xoordinateß position
     cv2.circle(frame, (x, y), 10, (0, 0, 255))
