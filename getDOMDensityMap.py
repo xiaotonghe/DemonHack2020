@@ -47,4 +47,5 @@ def getGravityVec(x, y, boxes):
     return radSumVec[2]-radSumVec[0], radSumVec[3]-radSumVec[1]
 
 
-print(getGravityVec(900, 300, DOMMatrix))
+if '__name__' == '__main__':
+    getGravityVec(900, 300, DOMMatrix)

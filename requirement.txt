@@ -1,0 +1,10 @@
+numpy
+opencv-python
+pynput
+dlib
+websockets
+matplotlib
+shapely
+
+
+
