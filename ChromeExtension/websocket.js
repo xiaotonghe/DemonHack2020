@@ -1,7 +1,7 @@
 function WebSocketCall(data) {
        
     if ("WebSocket" in window) {
-       alert("WebSocket is supported by your Browser!");
+       //alert("WebSocket is supported by your Browser!");
        
        // Let us open a web socket
        var ws = new WebSocket("ws://localhost:9998/echo");
@@ -10,18 +10,18 @@ function WebSocketCall(data) {
           
           // Web Socket is connected, send data using send()
           ws.send(data);
-          alert("Message is sent...");
+          //alert("Message is sent...");
        };
 
        ws.onmessage = function (evt) { 
           var received_msg = evt.data;
-          alert("Message is received...");
+          //alert("Message is received...");
        };
 
        ws.onclose = function() { 
           
           // websocket is closed.
-          alert("Connection is closed..."); 
+          //alert("Connection is closed..."); 
        };
     } else {
       

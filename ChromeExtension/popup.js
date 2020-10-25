@@ -51,7 +51,7 @@ document.getElementById("test").addEventListener('click', () => {
   }, (results) => {
       //Here we have just the innerHTML and not DOM structure
       //talk to local websocket server
-      WebSocketCall(results)
+      WebSocketCall(results[0].map((element)=>{return element.join("|")}))
       console.log('Popup script:')
       console.log(results[0]);
   });
