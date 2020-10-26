@@ -17,5 +17,4 @@ Goto Website
 Click on "Get DOM!" button under chrome extension view to dump into socket connection the current page view.
 python main.py
 
-[DEMO](https://youtu.be/app6cU1a4iU)
-![](demo.gif)
+![DEMO](demo.gif)
